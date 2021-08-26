@@ -9,7 +9,13 @@ if (!binary) {
 }
 
 const installExt = '--install-extension';
-const recommendations = ['esbenp.prettier-vscode', 'eamodio.gitlens'];
+const recommendations = [
+  'dbaeumer.vscode-eslint',
+  'eamodio.gitlens',
+  'EditorConfig.EditorConfig',
+  'esbenp.prettier-vscode',
+  'stylelint.vscode-stylelint',
+];
 const args = recommendations.reduce((args, rec) => {
   args.push(installExt);
   args.push(rec);
@@ -18,5 +24,5 @@ const args = recommendations.reduce((args, rec) => {
 
 const vscode = child_process.spawn(binary, args);
 
-vscode.stdout.on('data', data => process.stdout.write(data));
-vscode.stderr.on('data', data => process.stderr.write(data));
+vscode.stdout.on('data', (data) => process.stdout.write(data));
+vscode.stderr.on('data', (data) => process.stderr.write(data));
