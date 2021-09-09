@@ -28,15 +28,33 @@ const recommendExtensions = [
 ];
 
 // 建议安装列表
-const promptList = [];
-recommendExtensions.forEach((item) => {
-  const promptItem = {
+const promptList = [
+  {
     type: 'input',
-    message: `is install ${item} (y/n)`,
-    name: item.split('.')[1],
-  };
-  promptList.push(promptItem);
-});
+    message: `is install auto-complete-tag(自动闭合标签) (y/n)`,
+    name: 'auto-complete-tag',
+  },
+  {
+    type: 'input',
+    message: `is install simple-react-snippets(提供react相关的快捷指令) (y/n)`,
+    name: 'simple-react-snippets',
+  },
+  {
+    type: 'input',
+    message: `is install color-highlight(为css中颜色相关的代码展示对应的颜色) (y/n)`,
+    name: 'color-highlight',
+  },
+  {
+    type: 'input',
+    message: `is install vscode-todo-highlight(高亮TODO) (y/n)`,
+    name: 'vscode-todo-highlight',
+  },
+  {
+    type: 'input',
+    message: `is install vscode-import-cost(内联显示导入包的大小) (y/n)`,
+    name: 'vscode-import-cost',
+  },
+];
 
 // 控制台询问
 inquirer.prompt(promptList).then((answers) => {

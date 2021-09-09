@@ -1,6 +1,6 @@
 {
   "name": "sto-ivscode-extensions",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple binary that installs a package's recommended VS Code extentions",
   "bin": {
     "sto-ivscode-extensions": "./ive.js"
