@@ -1,6 +1,6 @@
 {
   "name": "sto-ivscode-extensions",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Simple binary that installs a package's recommended VS Code extentions",
   "bin": {
     "sto-ivscode-extensions": "./ive.js"
@@ -9,6 +9,8 @@
     "postversion": "npm publish",
     "postpublish": "git push origin master --tags"
   },
+  "repository": "https://github.com/JJoan0116/sto-ivscode-extensions",
+  "author": "Joan",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.1.2",
